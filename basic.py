@@ -104,20 +104,104 @@
 # i have {my_age} years in the earth, {my_color_eyes} is my eye color")
 # f == format, 변수와 문자열을 같이 사용할 수 있다
 
-def make_juice(fruit):
-    return f"{fruit}+cup..."
+# def make_juice(fruit):
+#     return f"{fruit}+cup..."
 
-def add_ice(juice):
-    return f"{juice}+ice"
+# def add_ice(juice):
+#     return f"{juice}+ice"
 
-def add_sugar(iced_juice):
-    return f"{iced_juice}+sugar"
+# def add_sugar(iced_juice):
+#     return f"{iced_juice}+sugar"
 
-juice = make_juice("apple")
-cold_juice = add_ice(juice)
-perfect_juice = add_sugar(cold_juice)
+# juice = make_juice("apple")
+# cold_juice = add_ice(juice)
+# perfect_juice = add_sugar(cold_juice)
 
-print(perfect_juice)
+# print(perfect_juice)
 
 
+# if 조건문
 
+# if 10 == 10:
+#     print("correct")
+
+
+# pw_correct= True
+
+# if pw_correct:
+#     print ("Here is your Money")
+# else :
+#     print("")
+
+
+# elif 
+
+# winner = 10
+
+# if winner > 10:
+#     print("winner is greater than 10")
+# elif winner < 10:
+#     print("winner is less than 10")
+# else:
+#     print("winner is 10")
+
+# input은 한 개의 argument만 받고, return 한다 이런 함수를 built-in 함수라고 함
+# age = input("how old are you")
+# print("user answer", age)
+# print(type(age))
+
+
+# age = int(input("how old are you"))  # 강제 형변환
+
+# if age<18:
+#     print("you cant drink")
+# elif age >= 18 and age <= 35: # and == &&
+#     print("you drink beer")
+# elif age == 60 or age == 70:  # or == ||
+#     print("birthday party")
+# if age >=14 and age <=16:
+#     print("middle school")
+# elif age ==17 or age == 18 or age ==19:
+#     print("high school")
+# else:
+#     print("go ahead") 
+
+# import random
+
+# user_choice = int(input("Choose number"))
+# pc_choice = random.randint(1, 50)
+
+# if user_choice == pc_choice:
+#     print("you won")
+# elif user_choice > pc_choice:
+#     print("lower Computer chose", pc_choice)
+# elif user_choice < pc_choice:
+#     print("higher computer chose", pc_choice)
+
+
+# While 반복문
+
+# distance = 0
+
+# while distance < 20:
+#     print("im running", distance, "km")
+#     distance += 1
+
+
+import random
+print("Welcome to Python Casino")
+playing = True
+pc_choice = random.randint(1, 100)
+
+while playing:
+    user_choice = int(input("Choose number"))
+    if user_choice == pc_choice:
+        print("you won")
+        playing = False
+    elif user_choice > pc_choice:
+        print("lower")
+    elif user_choice < pc_choice:
+        print("higher")
+
+
+    
