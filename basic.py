@@ -188,20 +188,65 @@
 #     distance += 1
 
 
-import random
-print("Welcome to Python Casino")
-playing = True
-pc_choice = random.randint(1, 100)
+# import random
+# print("Welcome to Python Casino")
+# playing = True
+# pc_choice = random.randint(1, 100)
 
-while playing:
-    user_choice = int(input("Choose number"))
-    if user_choice == pc_choice:
-        print("you won")
-        playing = False
-    elif user_choice > pc_choice:
-        print("lower")
-    elif user_choice < pc_choice:
-        print("higher")
+# while playing:
+#     user_choice = int(input("Choose number"))
+#     if user_choice == pc_choice:
+#         print("you won")
+#         playing = False
+#     elif user_choice > pc_choice:
+#         print("lower")
+#     elif user_choice < pc_choice:
+#         print("higher")
 
 
-    
+## data structure = 데이터를 구조화하고 싶을 때 사용 (그 중 list, tuple, dictionary가 있음)
+## list 
+
+# days_of_week = "Mon, Tue, Wed, Thu, Fri" 이런 코드는 하나하나 써먹을 수 없기 때문에 list를 사용함
+# days_of_week = ["Mon", "Tue", "Wed", "Thu", "Fri"]
+
+# print(days_of_week) 이렇게 사용하면 list의 전체 값이 print 되는데, 이때 method를 사용할 수 있음
+
+# name = "nico"
+# print(name.upper()) s
+# print는 function이고, method는 데이터 뒤에 결합/연결된 function임
+# name이라는 변수 안에 method가 존재하는 개념
+
+# days_of_week = ["Mon", "Tue", "Wed", "Thu", "Fri"]
+# print(days_of_week.clear()) 이 코드는 리스트를 비우고 아무것도 반환하지 않음. 그래서 none으로 찍힘
+
+# days_of_week = ["Mon", "Tue", "Wed", "Thu", "Fri"]
+# days_of_week.clear()
+# print(days_of_week) 하지만 이 코드는 비워진 리스트대로 반환되기 때문에 비워진 리스트를 출력함
+
+
+## tuple
+# days =  ("Mon", "Tue", "Wed")
+# 튜플은 불변성을 가지기 때문에 변경할 수 없음. 메소드도 얼마 없음... 변경할 수 없기 때문!
+# 바로 튜플과 리스트의 차이점. 리스트는 뭐든 변경할 수 있지만, 튜플은 그게 불가능함.
+# 그거 말고는 다 똑같음
+
+
+##  dicts
+# dictionary는 진짜 책처럼 키-값 쌍을 가지기 때문에 dictionary라고 부름
+player = {
+    'name': 'nico',
+    'age': 12,
+    'alive': True,
+    'fav_food': ["pizza", 'burger']
+}
+
+# print(player.get('age'))
+# print(player.get('fav_food')) == print(player['fav_food'])
+
+# clear(), pop(key)이라는 메소드로 dicts를 지울 수도 있음
+
+# player['xp'] = 1500 추가하기!
+# player['fav_food'].append("noodle") fav_food는 리스트기 때문에 리스트에 메소드를 당연히 사용할 수 있음
+print(player.get('fav_food'))
+print(player)
